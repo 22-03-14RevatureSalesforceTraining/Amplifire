@@ -1,0 +1,51 @@
+body {
+	margin: 0px 0px 200px 0px;
+	background: linear-gradient(to right, #F1FCDC 0%, #DCF1FD 100%);
+	background-size: cover;
+}
+
+#title-name {
+	margin: 0;
+	background-color:  #022437;
+	text-align: center;
+	padding: 30px;
+	font-size: 40px;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: bold;
+	position: relative;
+}
+
+span {
+	color: #FD9393;
+}
+
+.text-color{
+	color: white;
+}
+
+.alignItems{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+input {
+	margin: 20px;
+	width: 60%;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 3;
+}
+
+button {
+	width: 20%;
+	background-color: #C0FF4A;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 10px;
+}

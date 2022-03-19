@@ -49,3 +49,29 @@ button {
 	padding: 10px;
 	border-radius: 10px;
 }
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+figure {
+	display: inline-flex;
+	align-items: center;
+	flex-direction: column;
+	background: linear-gradient(to right, #FFFA9E 0%, #FFD7E3 100%);;
+	margin-top: 20px;
+	border: 3px solid black;
+  	border-radius: 10px;
+}
+
+figure:hover {
+	cursor: pointer;
+}
+
+figure p {
+	align-items: center;
+	margin-bottom: 5px;
+	font-size: 30px;
+}

@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name = "viewport" content = "width=device-width, initial scale = 1">
-  <title>Harry Potter Student Info</title>
+  <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+  <title>Harry Potter Character Info</title>
   <link rel="stylesheet" href="Project0.css">
+  <link href="http://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
 </head>
 <body>
-  <section class = 'header'>
-    <div id = 'title'>Harry Potter Student Information</div>
+  <section class = "header">
+    <div class = "text" id = "title">Harry Potter Character Information</div>
   </section>
 
-  <div class="results">
-	<div class="result">
-	  <p></p>
-	</div>
-	<div class="result">
-	  
-	</div>
+  <div id="input">
+    <span class="text" id="instruction">Enter a character's name from the table below:&nbsp;</span>
+    <form>
+      <input type="text" id="name" size="35">
+      <input type="button" value="Submit" id="submit">
+      <input type="button" value="Generate Random Character" id="random">
+    </form>
+  </div>
+
+  <div id="wrapper">
+    <div id="char_pic">
+      Character Placeholder
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p class="text">Character Name Placeholder</p>
+  </div>
+
+  <div>
+    <table>
+
+    </table>
   </div>
 </body>
 <script src="Project0.js"></script>

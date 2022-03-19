@@ -15,15 +15,16 @@
   font-size: 65px;
 }
 
+#char_info {
+  color: white;
+  
+}
+
 #input {
   display: flex;
   justify-content: center;
   font-size: 25px;
   margin-top: 50px;
-}
-
-#instruction {
-  color: rgb(116, 0, 1);
 }
 
 #wrapper {
@@ -34,11 +35,14 @@
 
 #char_pic {
   background-color: white;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 400px;
-  width: 300px;
+  height: 380px;
+  width: 280px;
+}
+
+#char_pic img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .header {

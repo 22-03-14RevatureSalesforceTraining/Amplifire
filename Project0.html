@@ -12,7 +12,9 @@
   </section>
 
   <div id="input">
-    <span class="text" id="instruction">Enter a character's name from the table below:&nbsp;</span>
+    <span class="text" style="color: rgb(116, 0, 1);">
+      Enter a character's name from the table below:&nbsp;
+    </span>
     <form>
       <input type="text" id="name" size="35">
       <input type="button" value="Submit" id="submit">
@@ -22,10 +24,17 @@
 
   <div id="wrapper">
     <div id="char_pic">
-      Character Placeholder
+      <p>Character Placeholder</p>
     </div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <p class="text">Character Name Placeholder</p>
+    <div style="padding-left: 100px;">
+      <figure>
+        <figcaption class="text" id="char_name">
+          Character Name Placeholder
+        </figcaption>
+        <ul style="font-size: 20px;" id="char_info">
+        </ul>
+      </figure>
+    </div>
   </div>
 
   <div>
@@ -33,6 +42,6 @@
 
     </table>
   </div>
+  <script src="Project0.js"></script>
 </body>
-<script src="Project0.js"></script>
 </html>

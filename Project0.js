@@ -4,7 +4,7 @@ const submit = document.getElementById('submit');
 const random = document.getElementById('random');
 var gryfChars, slytChars, huffChars, raveChars, characters = new Array();
 
-submit.addEventListener('click', getChar);
+submit.addEventListener('click', userInput);
 random.addEventListener('click', randomChar);
 
 async function fetchChars() {
@@ -20,12 +20,14 @@ async function fetchChars() {
     return characters;
 }
 
+
 window.onload = (event) => { //make Harry Potter the default character when page is loaded
     fetchChars().then(characters => {
         getChar("Harry Potter");
         createTable();
     })
 };
+
 
 function createTable() {
     var tbl = document.getElementById("char_house");
@@ -69,6 +71,13 @@ function createTable() {
     tbl.setAttribute("border", "2");
 }
 
+
+function userInput() {
+    const input = document.getElementById('name');
+    getChar(input);
+}
+
+
 function getChar(name) {
     var charPos = false;
     for(i = 0; i < characters.length; i++) {
@@ -80,33 +89,46 @@ function getChar(name) {
     if(!charPos && charPos !== 0) //if character not found in array
         return;                  //and the position isn't 0 then return
 
-    char_pic.innerHTML = '<img src=\"'+characters[charPos].image+'"/>';
-        switch(characters[charPos].house) {
-            case 'Gryffindor':
-                char_name.innerHTML = '<p style="color: rgb(116, 0, 1);">'+characters[charPos].name+'</p>';
-                //char_info.style = "color: rgb(116, 0, 1);";
-                break;
-            case 'Slytherin':
-                char_name.innerHTML = '<p style="color: rgb(26, 71, 42);">'+characters[charPos].name+'</p>';
-                break;
-            case 'Hufflepuff':
-                char_name.innerHTML = '<p style="color: rgb(255, 216, 0);">'+characters[charPos].name+'</p>';
-                break;
-            case 'Ravenclaw':
-                char_name.innerHTML = '<p style="color: rgb(14, 26, 64);">'+characters[charPos].name+'</p>';
-                break;
+    switch(characters[charPos].house) {
+        case 'Gryffindor':
+            char_name.innerHTML = '<p style="color: rgb(116, 0, 1);">'+characters[charPos].name+'</p>';
+            char_pic.innerHTML = '<img src="gryffindor.jpg"/>';
+            char_info.style = "color: rgb(116, 0, 1);";
+            break;
+        case 'Slytherin':
+            char_name.innerHTML = '<p style="color: rgb(26, 71, 42);">'+characters[charPos].name+'</p>';
+            char_pic.innerHTML = '<img src="slytherin.jpg"/>';
+            char_info.style = "color: rgb(26, 71, 42);";
+            break;
+        case 'Hufflepuff':
+            char_name.innerHTML = '<p style="color: rgb(255, 216, 0);">'+characters[charPos].name+'</p>';
+            char_pic.innerHTML = '<img src="hufflepuff.jpg"/>';
+            char_info.style = "color: rgb(255, 216, 0);";
+            break;
+        case 'Ravenclaw':
+            char_name.innerHTML = '<p style="color: rgb(14, 26, 64);">'+characters[charPos].name+'</p>';
+            char_pic.innerHTML = '<img src="ravenclaw.jpg"/>';
+            char_info.style = "color: rgb(14, 26, 64);";
+            break;
+    }
+
+    if(characters[charPos].image)
+        char_pic.innerHTML = '<img src=\"'+characters[charPos].image+'"/>';
+
+    var detail;
+    char_info.innerHTML = ''; //reset the list
+    for (const key in characters[charPos]) {
+        if(key != "wand" && key != "image" && key != "name" && `${characters[charPos][key]}`)
+        {
+            detail = document.createElement('li');
+            detail.appendChild(document.createTextNode(`${key}: ${characters[charPos][key]}`));
+            char_info.appendChild(detail);
         }
-        var detail;
-        for (const key in characters[charPos]) {
-            if(key != "wand" && key != "image" && key != "name" && `${characters[charPos][key]}`)
-            {
-                detail = document.createElement('li');
-                detail.appendChild(document.createTextNode(`${key}: ${characters[charPos][key]}`));
-                char_info.appendChild(detail);
-            }
-        }
+    }
 }
 
 function randomChar() {
-
+    var randomNum = Math.floor(Math.random() * characters.length);
+    var randomName = characters[randomNum].name;
+    getChar(randomName);
 }

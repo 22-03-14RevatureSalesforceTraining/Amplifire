@@ -1,23 +1,26 @@
 let country;
 let amount;
+let loopBreak = false;
 
 document.getElementById('startButton').addEventListener('click', buttonClicked);
 
 function buttonClicked(){
-    console.log('button pressed');
+    try{
+        console.log('button pressed');
 
-    country = prompt("Enter a country:");
-    console.log(country);
+        country = prompt("Enter a country:");
+        console.log(country);
 
-    document.getElementById("country").innerHTML = country;
+        document.getElementById("country").innerHTML = country;
 
-    amount = prompt("Enter amount(USD):");
+        amount = prompt("Enter amount(USD):");
 
-    document.getElementById("amount").innerHTML = amount;
+        document.getElementById("amount").innerHTML = amount;
 
-    console.log(amount);
+        console.log(amount);
 
-    if(country == 'England'){
+    while(loopBreak != true ){
+        if(country == 'England'){
         document.getElementById("flag").src = "images/England.png";
         fetch('https://v6.exchangerate-api.com/v6/ae52137dc15cbfa6d0bf5c37/latest/USD')
         .then(response => response.json())
@@ -26,78 +29,54 @@ function buttonClicked(){
                 document.getElementById("conversionRate").innerHTML = data.conversion_rates.GBP;
                 document.getElementById("conversion").innerHTML = data.conversion_rates.GBP*amount;
             });
+
+        loopBreak = true;
     }
     else if(country == 'United Arab Emirates'){
-
+        document.getElementById("flag").src = "images/UAE.png";
+        fetch('https://v6.exchangerate-api.com/v6/ae52137dc15cbfa6d0bf5c37/latest/USD')
+        .then(response => response.json())
+        .then(data => {console.log(data);
+                console.log(data.conversion_rates);
+                document.getElementById("conversionRate").innerHTML = data.conversion_rates.AED;
+                document.getElementById("conversion").innerHTML = data.conversion_rates.AED*amount;
+            }); 
+            loopBreak = true;  
     }
     else if(country == 'Japan'){
+        document.getElementById("flag").src = "images/Japan.png";
+        fetch('https://v6.exchangerate-api.com/v6/ae52137dc15cbfa6d0bf5c37/latest/USD')
+        .then(response => response.json())
+        .then(data => {console.log(data);
+                console.log(data.conversion_rates.JPY);
+                document.getElementById("conversionRate").innerHTML = data.conversion_rates.JPY;
+                document.getElementById("conversion").innerHTML = data.conversion_rates.JPY*amount;
+            })
+            .catch((error) => {
+                console.log("error", error);
+            });
 
+            loopBreak = true;
     }
     else if(country == 'France'){
+        document.getElementById("flag").src = "images/France.png";
+        fetch('https://v6.exchangerate-api.com/v6/ae52137dc15cbfa6d0bf5c37/latest/USD')
+        .then(response => response.json())
+        .then(data => {console.log(data);
+                console.log(data.conversion_rates.EUR);
+                document.getElementById("conversionRate").innerHTML = data.conversion_rates.EUR;
+                document.getElementById("conversion").innerHTML = data.conversion_rates.EUR*amount;
+            });
 
+            loopBreak = true;
     }
     else{
         country = prompt("Enter a country:");
     }
-    
+    }
 }
-
-/*let country = prompt("Enter a country:");
-
-console.log(country);
-
-document.getElementById("test").innerHTML = country;
-
-let amount = prompt("Enter amount:");
-
-console.log(parseFloat(amount));
-
-document.getElementById("test2").innerHTML = parseFloat(amount);
-
-let conversion = parseFloat(amount) * 10;
-
-let apiTest = 0;
-
-document.getElementById("test3").innerHTML = conversion;
-
-if(country == 'England'){
-    let a = document.createElement('img');
-    a.setAttribute('src', 'images/testImage.png');
-    a.setAttribute('alt', "Test image");
-    document.body.appendChild(a);
-}*/
-//var fetchTest = 10;
-
- /*fetch('https://v6.exchangerate-api.com/v6/ae52137dc15cbfa6d0bf5c37/latest/USD')
- .then(response => response.json())
- .then(data => {console.log(data);
-                console.log(data.conversion_rates);});*/
-
-  
-
-     /*fetch('https://v6.exchangerate-api.com/v6/ae52137dc15cbfa6d0bf5c37/latest/USD')
-        .then(response =>{
-            return response.json();
-        }).then(dataFetch => {
-            
-            console.log(dataFetch.conversion_rates.AED * fetchTest);
-        })*/
-    
-
-   
-
-
-//console.log(objTest);
-//console.log(fetchTest);
-    //console.log(fetchTest.conversion_rates);
-
-     
-
-
- 
- //console.log(apiTest);
-
- //console.log(data.AED);
-
-
+catch(error){
+    console.log(error);
+}
+}
 

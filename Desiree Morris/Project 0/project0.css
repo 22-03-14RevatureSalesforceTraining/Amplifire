@@ -48,3 +48,30 @@ table {
 }
 
 /* Start of Project 0 CSS by Desiree Morris */
+#navBar {
+	border: 2px solid blue;
+}
+
+#wrapper {
+	border: 2px solid yellow;
+}
+
+#generator {
+	border: 2px solid green;
+}
+
+.heroCard {
+	border: 2px solid black;
+}
+
+.heroInfo {
+	border: 2px solid gray;
+}
+
+#team {
+	border: 2px solid purple;
+}
+
+#footer {
+	border: 2px solid red;
+}

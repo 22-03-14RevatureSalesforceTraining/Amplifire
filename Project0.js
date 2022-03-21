@@ -115,7 +115,7 @@ function getChar(name) {
     }
 
     if(characters[charPos].image)
-        char_pic.innerHTML = '<img src=\"'+characters[charPos].image+'"/>';
+        char_pic.innerHTML = '<img src=\"'+characters[charPos].image+'"alt="Character Not Found"/>';
 
     var result, finalResult, val, detail;
     char_info.innerHTML = ''; //reset the list

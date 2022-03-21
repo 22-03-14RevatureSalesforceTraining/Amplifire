@@ -5,14 +5,14 @@
 
 .text {
   color:white;
-  font-size: 25px;
+  font-size: 1.3vmax;
   font-family: 'Harry Potter', sans-serif;
 }
 
 #title {
   text-align: center;
-  padding: 80px;
-  font-size: 65px;
+  padding-top: 7vh;
+  font-size: 3.5vmax;
 }
 
 #char_house {
@@ -21,7 +21,7 @@
   height:400px;
   width:700px;
   display: block;
-  margin: 25px 0;
+  margin: 20px 0;
   font-size: 0.9em;
   font-family: sans-serif;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -66,38 +66,41 @@
 
 #char_info {
   color: white;
-  font-size: 20px;
+  font-size: 1.1vmax;
 }
 
-#input {
+.inputflex {
   display: flex;
   justify-content: center;
-  font-size: 25px;
+  align-items: center;
   margin-top: 50px;
 }
 
-.wrapper {
+.charflex {
   display: flex;
-  position: relative;
-  left: 400px;
-  margin: 40px;
+  flex-wrap: wrap;
+  margin-top: 3%;
+  height: 26vmax;
 }
 
-.table_wrapper {
+.tableflex {
   display: flex;
-  position: relative;
   justify-content: center;
-  margin: 40px;
+  margin-bottom: 5vh;
 }
 
 #char_pic {
+  margin-left: 32vw;
+  height: 20vmax;
+  width: 16vmax;
   background-color: white;
-  height: 380px;
-  width: 280px;
 }
 
-#char_pic img{
+#char_pic img {
+  display: block;
   object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
   height: 100%;
   width: 100%;
 }
@@ -112,7 +115,7 @@
 
 body {
   background-image: url(https://www.seekpng.com/png/full/173-1736350_fog-background-mist.png);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
 }

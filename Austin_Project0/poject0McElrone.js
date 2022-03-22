@@ -10,7 +10,9 @@ let amount;
 let loopBreak = false;
 
 document.getElementById('startButton').addEventListener('click', buttonClicked); // Event listener
-
+/*function buttonClicked loops through user's country entry until there is a match,
+  once the if statement is satisfied, the function fetches the conversion rate from the api, performs a 
+  calculation and then writes the info to the html elements */
 function buttonClicked(){
     try{
         console.log('button pressed');
@@ -18,14 +20,14 @@ function buttonClicked(){
         country = prompt("Enter a country:");
         console.log(country);
 
-        document.getElementById("country").innerHTML = country;
+        
 
         amount = prompt("Enter amount(USD):");
 
         document.getElementById("amount").innerHTML = amount;
 
         console.log(amount);
-
+        
         while(loopBreak != true ){//if true, loop will break
             if(country == 'England'){
                 document.getElementById("flag").src = "images/England.png";
@@ -36,6 +38,8 @@ function buttonClicked(){
                 document.getElementById("conversionRate").innerHTML = data.conversion_rates.GBP;
                 document.getElementById("conversion").innerHTML = data.conversion_rates.GBP*amount;
                 });
+                
+                document.getElementById("country").innerHTML = country;
 
                 loopBreak = true;
             }
@@ -48,6 +52,9 @@ function buttonClicked(){
                 document.getElementById("conversionRate").innerHTML = data.conversion_rates.AED;
                 document.getElementById("conversion").innerHTML = data.conversion_rates.AED*amount;
             }); 
+
+            document.getElementById("country").innerHTML = country;
+
             loopBreak = true;  
         }
         else if(country == 'Japan'){
@@ -63,6 +70,8 @@ function buttonClicked(){
                 console.log("error", error);
             });
 
+            document.getElementById("country").innerHTML = country;
+
             loopBreak = true;
         }
         else if(country == 'France'){
@@ -74,6 +83,8 @@ function buttonClicked(){
                 document.getElementById("conversionRate").innerHTML = data.conversion_rates.EUR;
                 document.getElementById("conversion").innerHTML = data.conversion_rates.EUR*amount;
             });
+
+            document.getElementById("country").innerHTML = country;
 
             loopBreak = true;
         }

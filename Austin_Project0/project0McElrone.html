@@ -6,37 +6,62 @@
     </head>
     <body>
 
-        <button id = "startButton" type = "button">Start Here</button>
-           <div class = "country">
+        <h1 id = "title">Foreign Exchange</h1>
+        
+        <section class = "menuBar">
+            <p id = "countryTitle">Available Countries:</p> 
+
+            <div id = "menu">
+                <p>England</p> 
+                <p>United Arab Emirates</p> 
+                <p>France</p> 
+                <p>Japan</p> 
+            </div>
+        </section>
+        
+        <section class = "buttonAlign">
+            <button id = "startButton" type = "button">Start Here</button>
+        </section>   
+        
+        <section class = "countrySection">
             <p>Country:</p>
-            <p id = "country"></p>
-           </div>
+            <p id = "country">(entered country)</p>
+        </section>
+
+        <section class = "amountSection">
             <p>Amount USD:</p>
-            <p id = "amount"></p>
+            <p id = "amount">(entered amount)</p>
+        </section>
 
+        <section class = "rateSection">
             <p>Country conversion rate:</p>
-            <p id = "conversionRate"></p>
+            <p id = "conversionRate">(rate)</p>
+        </section>
 
+        <section class = "conversionSection">
             <p>Converted Amount:</p>
-            <p id = "conversion"></p>
-
-            <img id = 'flag' src = 'images/UnitedStates.png' alt = 'flag'>
-
-            <ul>
+            <p id = "conversion">(conversion)</p>
+        </section>
+        
+        <img id = 'flag' src = 'images/UnitedStates.png' alt = 'flag'>
+           
+        <section class = "linkList"> 
+            <p>Useful Info:</p>
+            <ul id = "list">
                 <li>
-                    <a href = 'https://en.wikipedia.org/wiki/Japan'>Japan</a>
+                    <a href = 'https://en.wikipedia.org/wiki/Japan' target = "_blank">Japan</a>
                 </li>
                 <li>
-                    <a href = 'https://en.wikipedia.org/wiki/France'>France</a>
+                    <a href = 'https://en.wikipedia.org/wiki/France' target = "_blank">France</a>
                 </li>
                 <li>
-                    <a href = 'https://en.wikipedia.org/wiki/England'>England</a>
+                    <a href = 'https://en.wikipedia.org/wiki/England' target = "_blank">England</a>
                 </li>
                 <li>
-                    <a href = 'https://en.wikipedia.org/wiki/United_Arab_Emirates'>United Arab Emirates</a>
+                    <a href = 'https://en.wikipedia.org/wiki/United_Arab_Emirates' target = "_blank">United Arab Emirates</a>
                 </li>
             </ul>
-            
+        </section>
         
         <script src = "poject0McElrone.js"></script>
     </body>

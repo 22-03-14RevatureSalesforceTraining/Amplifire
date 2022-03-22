@@ -1,5 +1,5 @@
 body {
-	margin: 0px 0px 200px 0px;
+	margin: 0px 0px 10vh 0px;
 	background: linear-gradient(to right, #F1FCDC 0%, #DCF1FD 100%);
 	background-size: cover;
 }
@@ -43,9 +43,10 @@ input::-webkit-input-placeholder {
 }
 
 button {
-	width: 20%;
+	width: auto;
+	height:  auto;
 	background-color: #C0FF4A;
-	font-size: 20px;
+	font-size: 3vw;
 	padding: 10px;
 	border-radius: 10px;
 }
@@ -56,7 +57,12 @@ button {
 	justify-content: space-around;
 }
 
-figure {
+#errorMessage{
+	color:  red;
+	font-size: 20px;
+}
+
+main div {
 	display: inline-flex;
 	align-items: center;
 	flex-direction: column;
@@ -66,12 +72,45 @@ figure {
   	border-radius: 10px;
 }
 
-figure:hover {
+main div:hover, main div:focus {
+  transform: scale(1.05);
+}
+
+.x {
+	all: unset;
+	position: relative;
+	margin-left: 90%;
+	margin-top: 5%;
+	visibility: hidden;
+	opacity: 0;	
+	transition: visibility 0.75s linear, opacity 0.75s linear;
+}
+
+main div:hover .x {
+	visibility: visible;
+	opacity: 1;
+}
+
+img {
+	width: 28vw;
+    height: 35vw;
+}
+
+@media only screen and (max-width: 770px){
+	img {
+		width: 45vw;
+		height: 50vw;
+	}
+}
+
+main div:hover {
 	cursor: pointer;
 }
 
-figure p {
+div a {
 	align-items: center;
 	margin-bottom: 5px;
 	font-size: 30px;
+	color:  black;
+	text-decoration: none;
 }

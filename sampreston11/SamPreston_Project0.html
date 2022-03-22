@@ -5,49 +5,350 @@
 <html>
     
     <head> 
-        <title> GoodTimes USA!  </title>
-        <link rel="stylesheet"  href="SamPreston_Project0.css"  >
+        <title> Football DataBase  </title>
+        <link rel="stylesheet" type="text/css"  href="SamPreston_Project0.css">
         
     </head>
     
     <body>
         
-        <img src="https://static.wixstatic.com/media/ac6e2d_3645b81b30b14be6a8cdef6a1a572cd6~mv2_d_5319_1759_s_2.png"
-         height="104" width="316" paddling-top="25px">
+        <script src="SamPreston_Project0.js"></script>
         
-        <span class="cloud" style="font-size: 40px;"> &#9729</span>
-        <span class="umbrella" style="font-size: 40px;"> &#9730</span>
-        <span class="phone" style="font-size: 40px;"> &#9742</span>
-        <span class="flag" style="font-size: 40px;"> &#9873</span>
-        
-        <ul class="heading" justify-content: flex-end> 
-            <li style="display: inline-block; font-size: 32px"> <a href=""> Our Story </a></li>
-            <li style="display: inline-block; font-size: 32px"> <a href=""> Partners </a></li>
-            <li style="display: inline-block; font-size: 32px"> <a href=""> Our services </a></li>
-            <li style="display: inline-block; font-size: 32px"> <a href=""> Industry </a></li>
-        </ul>
-        
-        <h1 class="pageheader" style="color: white; font-size: 35px; font-weight: 700">Building a better future today!</h1>
-        
-        <ul  class="product_categories">
-            <li style="display:inline-block;"> <img src="https://img.freepik.com/free-photo/group-young-people-working-together_23-2148499851.jpg?size=626&ext=jpg" height ="200" width="300"/> </li>
-            <li style="display:inline-block;"> <img src="https://th.bing.com/th/id/OIP.TDuL5gSQJqBbqFYZjv2gfwHaEJ?w=321&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" height="200" width="300"/> </li>
-            <li style="display:inline-block;"> <img src="https://assets.weforum.org/editor/Y85Fpj145L9liV2YyTOnJcgn20jXjV74WttGuUMAiyk.PNG" height="200" width="300"/> </li>
-        </ul>
+        <nav>
+            <div class="container">
+                <h1>Welcome to the #1 NFL stat page!</h1>
+                <img id="nflLogo" src="https://th.bing.com/th/id/R.c99a416263d548b146580fb8172cf878?rik=tQp9uYTdl4Ff2Q&pid=ImgRaw&r=0">
+            </div>
+        </nav>
 
-        <ul class="product_description" style="color: white; font-size: 18px; font-weight: 700">
-            <li style="display:inline-block;"> Sharing Data has never been so easy!</li>
-            <li style="display:inline-block;"> Peer-to-peer networking has brought businesses and cultures together</li>
-            <li style="display:inline-block;"> Our efforts have been focused on bringing Cloud solutions to the entier world</li>
-        </ul>
-
-        <div style="color: white; font-size: 18px">Welcome to GoodTimes USA! We are one of the world's first free online data repositories. 
-        Our Business model aims to empower users to have free acess to their data via our cloud platform. Cusotmers will be able to sign up 
-        and store data on a centralized network of our servers. We hold ourselves to the highest of moral and ethical standards. 
-        </div>
+        <br>
+        <br>
         
-        <div style="color: white; font-size: 18px">
+        <input  id="userInput" type="text"  placeholder="Search player..."> <br><br>
+        <button onclick="searchPlayer()" > Submit </button>
+        <h1 id="message"> </h1>
+        
+        <h3>Kyler Murray</h3>
+        <img id="kmurray" src="https://th.bing.com/th/id/OIP.UXeO8dImU-nA4LHCyo-snAHaEK?w=321&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+        <table class="Quarterbacks" id="Kyler Murray">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+        
+        
 
-        </div>
+        <h3>Matt Ryan</h3>
+        <img id="Matt Ryan" src="https://th.bing.com/th/id/R.458c485426cd72bf74aeb2792f479243?rik=mMlKAUuSqfIT7w&pid=ImgRaw&r=0">
+        <table class="Quarterbacks" id="Matt Ryan">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+        <h3>Sam Darnold</h3>
+        <img id="Sam Darnold" src="https://th.bing.com/th/id/OIP.xlA-1rpRsPqKCpsRL0R_LAHaE7?pid=ImgDet&rs=1">
+        <table class="Quarterbacks" id="Sam Darnold">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+
+        <h3>Justin Fields</h3>
+        <img id="Justin Fields" src="https://th.bing.com/th/id/R.14b15ed1853464d7335fa3c1a42f8c7b?rik=h3E0fIyYjGDJqA&pid=ImgRaw&r=0">
+        <table class="Quarterbacks" id="Justin Fields">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+        <h3>Dak Prescott</h3>
+        <img id="Dak Prescott" src="https://th.bing.com/th/id/R.de3bba6c5e192d196e4a0da94f725bef?rik=pVZ98eNdrVtOvQ&pid=ImgRaw&r=0">
+        <table class="Quarterbacks" id="Dak Prescott">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+        <h3>Aaron Rodgers</h3>
+        <img id="Aaron Rodgers" src="https://th.bing.com/th/id/R.92fdbadb3009638ff58b658ee4e767a2?rik=ZOvzldWhtLEPbg&pid=ImgRaw&r=0"
+        <table class="Quarterbacks" id="Aaron Rodgers">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+    
+        <h3>Jared Goff</h3>
+        <img id="Jared Goff" src="https://th.bing.com/th/id/R.0499bc43ef08037eeebfc0938b9c2a32?rik=GDqJA3DJebeTtQ&pid=ImgRaw&r=0">
+        <table class="Quarterbacks" id="Jared Goff">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+
+        <h3>Matthew Stafford</h3>
+        <img id="Matthew Stafford" src="https://th.bing.com/th/id/R.4ea68bf7001a0160868f36a3aee582e0?rik=kCt%2bJ44mXbinxA&pid=ImgRaw&r=0">
+        <table class="Quarterbacks" id="Matthew Stafford">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+        <h3>Kirk Cousins</h3>
+        <img id="Kirk Cousins" src="https://th.bing.com/th?id=OIF.DAOxNxRKasOqsvHqX%2f1R6w&pid=ImgDet&rs=1">
+        <table class="Quarterbacks" id="Kirk Cousins">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+        <h3>Jameis Wintson</h3>
+        <img id="Jameis Winston" src="https://th.bing.com/th?id=OIF.UPuIW%2fSW7DEKLUFExG52Fw&pid=ImgDet&rs=1">
+        <table class="Quarterbacks" id="Jameis Winston">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+        <h3>Daniel Jones</h3>
+        <img id="Daniel Jones" src="https://th.bing.com/th/id/OIP.2Id_YOjrNlKM4C_DD9g3ewHaEi?pid=ImgDet&rs=1">
+        <table class="Quarterbacks" id="Daniel Jones">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+        <h3>Jalen Hurts</h3>
+        <img id="Jalen Hurts" src="https://th.bing.com/th/id/R.992ee1cf3f5cdc0cf63044f660b4885f?rik=8tV%2b%2bvP0IB3l5A&pid=ImgRaw&r=0">
+        <table class="Quarterbacks" id="Jalen Hurts">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+        <h3>Jimmy Garappolo</h3>
+        <img id="Jimmy Garoppollo" src="https://th.bing.com/th/id/OIP.O58CTnQVkSxIU3xB-RHwzAHaE8?w=264&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+        <table class="Quarterbacks" id="Jimmy Garapollo">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+        <h3>Russell Wilson</h3>
+        <img id="Russell Wilson" src="https://th.bing.com/th/id/R.26884ab987092cd3745dcd8f09ad61f4?rik=EzUQabMSMMGyjQ&pid=ImgRaw&r=0">
+        <table class="Quarterbacks" id="Russell Wilson">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+
+        <h3>Taylor Heinicke</h3>
+        <img id="Taylor Heinicke" src="https://th.bing.com/th/id/OIP.TZSksfTpn_APRg9qog54TwHaE8?pid=ImgDet&rs=1">
+        <table class="Quarterbacks" id="Taylor Heinicke">
+            <th id="table_header"> Kyler Murray Stats
+                <tr>
+                    <td>Year</td>
+                    <td>Passing Yards</td>
+                    <td>Passing Touchdowns</td>
+                    <td>Interceptions</td>
+                    <td>Completion Percentage (%)</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>3787</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>67.8 %</td>
+                </tr>
+            </th>
+        </table>
+        
+
+       
+        
     </body>
 </html>

@@ -1,53 +1,34 @@
 /* CSS Project 0 Document */
 
-body {
-    background-color: orange ;
-}
 
-p { 
-    display: external;
-    color: blue;
-    margin: 35px;
-}
-
-h1 {
-    color: white;
-    background-color: red; 
-    font-size: 24pt;
-    margin: 10px 5px 15px;
-}
-
-span.flag {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    justify-content: flex-end;
-}
-span.cloud {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    justify-content: flex-end;
-}
-span.umbrella{
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    justify-content: flex-end;
-}
-span.phone{
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    justify-content: flex-end;
-}
-
-li.heading{
-    display: inline-block;
-    justify-content: space-around;
-}
-
-ul.product_categories{
-    justify-content: space-between;
-}
-
-h1.pageheader{
+html {
+    display: table;
+    text-align: center;
+    align-items: center;
     justify-content: center;
+    color: white;
+
 }
+
+body {
+    background-color: rgb(20, 102, 48) ;
+    padding: 50px 75px 125px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+img{
+    height: 200px;
+    width: 300px;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    
+  }
+  th.td {
+      column-span: 4; 
+  }
 

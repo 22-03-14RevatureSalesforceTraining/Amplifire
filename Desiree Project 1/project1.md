@@ -25,7 +25,7 @@ While work is being completed or after work has been completed **customer accoun
 
 ## Link to Kanban Board
 
-![KanbanBoard](https://github.com/22-03-14RevatureSalesforceTraining/Amplifire/projects/7)
+[KanbanBoard](https://github.com/22-03-14RevatureSalesforceTraining/Amplifire/projects/7)
 
 ## Daily Stand Up Notes
 

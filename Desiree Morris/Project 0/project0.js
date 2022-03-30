@@ -118,7 +118,7 @@ window.onload = function() {
     the page with their cards*/
 
     function ravenButtonClick() {
-        console.log ("Hufflepuff button was clicked");
+        console.log ("Ravenclaw button was clicked");
         fetch("http://hp-api.herokuapp.com/api/characters/house/ravenclaw")
         .then(res => res.json())
         .then(data => createCards(data))
@@ -131,7 +131,7 @@ window.onload = function() {
     the page with their cards*/
 
     function slyButtonClick() {
-        console.log ("Hufflepuff button was clicked");
+        console.log ("Slytherin button was clicked");
         fetch("http://hp-api.herokuapp.com/api/characters/house/slytherin")
         .then(res => res.json())
         .then(data => createCards(data))

@@ -1,0 +1,3 @@
+<aura:component>
+    <aura:handler event="c:UpDownEvent" action="{!c.handleUpDownEvent}"/>
+</aura:component>	

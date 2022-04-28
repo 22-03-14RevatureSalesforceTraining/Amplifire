@@ -52,8 +52,8 @@ public without sharing class PokemonAPICallout {
             }
         }
         
-        returnMap.put('ability', abilityList);
         returnMap.put('type', typeList);
+        returnMap.put('ability', abilityList);
         returnMap.put('image', images);
         returnmap.put('name', name);
         

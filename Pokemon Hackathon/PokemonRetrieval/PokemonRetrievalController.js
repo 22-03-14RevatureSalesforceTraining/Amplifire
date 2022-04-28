@@ -1,8 +1,4 @@
 ({
-	generateClicked : function(component, event, helper) {
-		helper.getPokemon(component, 1);
-	},
-    
     doInit : function(component, event, helper){
         var mapList = component.get('v.info');
         var imageName = component.get('v.imageName');
@@ -14,7 +10,8 @@
     },
 
     handleRandomEvent : function(component, event, helper){
-        var randomNum = Math.floor(Math.random() * 898);
-        helper.getPokemon(component, randomNum);
+        let num = event.getParam("message");
+        component.set("v.index", num);
+        helper.getPokemon(component);
     }
 })

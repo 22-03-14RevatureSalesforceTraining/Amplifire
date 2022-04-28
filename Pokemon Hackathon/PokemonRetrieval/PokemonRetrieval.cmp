@@ -5,15 +5,15 @@
     <aura:attribute name="pokemonName" type="String" default="Undefined" />
     <aura:attribute name="pokemonType" type="List" default="[]"/>
     <aura:attribute name="pokemonAbility" type="List" default="[]"/>
-    <aura:handler name="random" event="c:RandomEvent" action="{!c.handleRandomEvent}"/>
-    <button class="slds-button slds-button_brand" onclick="{!c.generateClicked}">Generate</button>
-    <br/>
+    <aura:attribute name="index" type="String" default="1"/>
+    <aura:handler event="c:RandomEvent" action="{!c.handleRandomEvent}"/>
     <aura:handler name="change" value="{!v.info}" action="{!c.doInit}"/>
     <img src="{!v.imageName}" alt="{No Image}"/>
     <br/>
     <h1>{!v.pokemonName}</h1>
     <br/>
-    
+    {!v.index}
+    <br/>
     <p>Type: </p>
     <ul>
     <aura:iteration items="{!v.pokemonType}" var="element">

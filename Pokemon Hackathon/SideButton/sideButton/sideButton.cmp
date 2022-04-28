@@ -1,0 +1,7 @@
+<aura:component>
+    <aura:attribute name="rightClick" type="boolean"/>
+    <lightning:button label="Fire Right Click" onclick="{!c.firerightClick}"/>
+    <aura:attribute name="leftClick" type="boolean"/>
+    <lightning:button label="Fire Left Click" onclick="{!c.fireleftClick}"/>
+
+</aura:component>

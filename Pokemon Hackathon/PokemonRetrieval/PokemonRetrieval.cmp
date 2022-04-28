@@ -5,6 +5,7 @@
     <aura:attribute name="pokemonName" type="String" default="Undefined" />
     <aura:attribute name="pokemonType" type="List" default="[]"/>
     <aura:attribute name="pokemonAbility" type="List" default="[]"/>
+    <aura:handler name="random" event="c:RandomEvent" action="{!c.handleRandomEvent}"/>
     <button class="slds-button slds-button_brand" onclick="{!c.generateClicked}">Generate</button>
     <br/>
     <aura:handler name="change" value="{!v.info}" action="{!c.doInit}"/>

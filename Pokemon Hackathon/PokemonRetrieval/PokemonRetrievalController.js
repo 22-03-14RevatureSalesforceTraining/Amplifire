@@ -1,6 +1,6 @@
 ({
 	generateClicked : function(component, event, helper) {
-		helper.getPokemon(component);
+		helper.getPokemon(component, 1);
 	},
     
     doInit : function(component, event, helper){
@@ -11,5 +11,10 @@
         component.set("v.pokemonType", mapList[1]['value']);
         component.set("v.pokemonAbility", mapList[0]['value']);
         //console.log(mapList[3]['value'][0]);
+    },
+
+    handleRandomEvent : function(component, event, helper){
+        var randomNum = Math.floor(Math.random() * 898);
+        helper.getPokemon(component, randomNum);
     }
 })

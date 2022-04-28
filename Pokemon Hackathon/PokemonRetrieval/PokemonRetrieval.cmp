@@ -1,32 +1,34 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="PokemonAPICallout">
 
     <aura:attribute name="info" type="List" access="public" />
-    <aura:attribute name="imageName" type="String" default="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"/>
-    <aura:attribute name="pokemonName" type="String" default="Undefined" />
-    <aura:attribute name="pokemonType" type="List" default="[]"/>
-    <aura:attribute name="pokemonAbility" type="List" default="[]"/>
+    <aura:attribute name="imageName" type="String" default="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"/>
+    <aura:attribute name="pokemonName" type="String" default="Bulbasaur" />
+    <aura:attribute name="pokemonType" type="List" default="['grass ', 'poison']"/>
+    <aura:attribute name="pokemonAbility" type="List" default="['overgrow' , 'chlorophyll ']"/>
     <aura:attribute name="index" type="String" default="1"/>
     <aura:handler event="c:RandomEvent" action="{!c.handleRandomEvent}"/>
     <aura:handler name="change" value="{!v.info}" action="{!c.doInit}"/>
-    <img src="{!v.imageName}" alt="{No Image}"/>
-    <br/>
-    <h1>{!v.pokemonName}</h1>
-    <br/>
-    {!v.index}
-    <br/>
-    <p>Type: </p>
-    <ul>
-    <aura:iteration items="{!v.pokemonType}" var="element">
-        <li>{!element}</li> 
-	</aura:iteration>
-	</ul>
     
-    <p>Ability: </p>
-    <ul>
-        <aura:iteration items="{!v.pokemonAbility}" var="element">
-            <li>{!element}</li>
+    
+    <div id="customLayout">
+        <img src="{!v.imageName}" alt="{No Image}"/>
+        <br/>
+        <h1>{!v.pokemonName}</h1>
+        <br/>
+        <p>Type: </p>
+        <ul>
+        <aura:iteration items="{!v.pokemonType}" var="element">
+            <li>{!element}</li> 
         </aura:iteration>
-    </ul>
+        </ul>
+        
+        <p>Ability: </p>
+        <ul>
+            <aura:iteration items="{!v.pokemonAbility}" var="element">
+                <li>{!element}</li>
+            </aura:iteration>
+        </ul>
+    </div>
     <!-- <p>{!v.info.name[1]}</p>
     <p>{!v.info.type[0]}</p> -->
 </aura:component>

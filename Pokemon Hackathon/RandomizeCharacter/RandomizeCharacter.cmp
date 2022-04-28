@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:registerEvent name="randomPokemon" type="c:RandomEvent"/>
+    <lightning:button variant="brand-outline" label="Random Pokémon" title="Generates a Random Pokémon" onclick="{!c.fireRandomEvent}" class="slds-m-left_x-small"/>
+</aura:component>

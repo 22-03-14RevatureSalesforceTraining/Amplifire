@@ -1,0 +1,31 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="PokemonAPICallout">
+
+    <aura:attribute name="info" type="List" access="public" />
+    <aura:attribute name="imageName" type="String" default="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"/>
+    <aura:attribute name="pokemonName" type="String" default="Undefined" />
+    <aura:attribute name="pokemonType" type="List" default="[]"/>
+    <aura:attribute name="pokemonAbility" type="List" default="[]"/>
+    <button class="slds-button slds-button_brand" onclick="{!c.generateClicked}">Generate</button>
+    <br/>
+    <aura:handler name="change" value="{!v.info}" action="{!c.doInit}"/>
+    <img src="{!v.imageName}" alt="{No Image}"/>
+    <br/>
+    <h1>{!v.pokemonName}</h1>
+    <br/>
+    
+    <p>Type: </p>
+    <ul>
+    <aura:iteration items="{!v.pokemonType}" var="element">
+        <li>{!element}</li> 
+	</aura:iteration>
+	</ul>
+    
+    <p>Ability: </p>
+    <ul>
+        <aura:iteration items="{!v.pokemonAbility}" var="element">
+            <li>{!element}</li>
+        </aura:iteration>
+    </ul>
+    <!-- <p>{!v.info.name[1]}</p>
+    <p>{!v.info.type[0]}</p> -->
+</aura:component>

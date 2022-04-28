@@ -1,8 +1,10 @@
 ({
 	getPokemon : function(component) {
 		let action = component.get("c.QueryPokemon");
-        action.setParams({ pokemonName : "76" });
+        let index = component.get("v.index");
+        action.setParams({ pokemonName : index });
         action.setCallback(this, function(response){
+            //console.log(response.getState());
             if(response.getState() == 'SUCCESS'){
                 let returnList = [];
                 let temp = response.getReturnValue();

@@ -1,24 +1,30 @@
 ({
     pwrPokeHelper : function(component) {
-        // let a = component.get("c.classname")
+        // This code will be in the main helper called handlePwrPoke
         let pokemonState = component.get("v.info");
         let oldState = null;
-        if(pokemonState != null){
+        //console.log(pokemonState);
+        
+        if(pokemonState){
             /* Default - There is a API call that gets the pokemon info
              * if the info is not null, then...
              * Set the oldState to pokemonState
              * Set v.info it to null to turn off the info 
              * (Defaults need to be changed to blank pictures and not bulbasaur)
              */
+            console.log("current state is " + pokemonState);
             oldState = pokemonState;
-            component.set("v.info", null);
+            component.set("v.info", false);
+            console.log("pokeMon state not null");
         }else {
             /* if the info is null, then ...
              * Set the v.info to oldState (which should have pokemon info)
              * Set the oldState to null
              */
-            component.set("v.info", oldState);
-            oldState = null;
+            console.log("current state is " + pokemonState);
+            component.set("v.info", true);
+            oldState = false;
+            console.log("pokeMon state was null");
         }
     }
 })

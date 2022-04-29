@@ -1,6 +1,11 @@
 <aura:component>
-    <!-- <aura:attribute name=" " /> -->
+    <!-- in main component -->
+    <aura:attribute name="info" type="boolean" default="True" />
+    <aura:if isTrue="{!v.info}">Test</aura:if>
+    
+    <!-- Stays in this component -->
     <div>
-        <lightning:buttonIcon iconName="utility:connected_apps" variant="brand" alternativeText="Power Button" title="Power Button Action" onClick= "{!c.powerPokedex}"/>
+        <lightning:buttonIcon iconName="utility:connected_apps" variant="brand" alternativeText="Power Button" title="Power Button Action" onclick="{!c.powerPokedex}"/>
     </div>
-</aura:component>	
+    
+</aura:component>

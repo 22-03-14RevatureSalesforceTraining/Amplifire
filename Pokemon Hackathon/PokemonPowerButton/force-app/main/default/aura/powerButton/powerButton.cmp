@@ -1,0 +1,6 @@
+<aura:component>
+    <!-- <aura:attribute name=" " /> -->
+    <div>
+        <lightning:buttonIcon iconName="utility:connected_apps" variant="brand" alternativeText="Power Button" title="Power Button Action" onClick= "{!c.powerPokedex}"/>
+    </div>
+</aura:component>	

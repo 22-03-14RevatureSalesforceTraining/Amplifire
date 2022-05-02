@@ -1,11 +1,13 @@
 <aura:component>
     <!-- in main component -->
     <aura:attribute name="info" type="boolean" default="True" />
+    <aura:handler event="c:PowerButtonEvent" action="{!c.powerPokedex}"/>
+    
     <aura:if isTrue="{!v.info}">Test</aura:if>
     
-    <!-- Stays in this component -->
+    <!-- Stays in its own component -->
     <div>
-        <lightning:buttonIcon iconName="utility:connected_apps" variant="brand" alternativeText="Power Button" title="Power Button Action" onclick="{!c.powerPokedex}"/>
+        <c:PowerButtonNotifier/>
     </div>
     
 </aura:component>

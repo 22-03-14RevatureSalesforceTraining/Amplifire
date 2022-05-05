@@ -1,3 +1,0 @@
-<aura:event type="Application" description="Up/Down Button Press">
-    <aura:attribute name = "Click" type = "string"/>    
-</aura:event>

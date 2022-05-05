@@ -1,3 +1,0 @@
-<design:component>
-	<!-- allows us to work with our component variables inside lightning app builder, can choose what code to expose-->
-</design:component>

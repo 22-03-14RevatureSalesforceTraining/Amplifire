@@ -22,14 +22,17 @@ List of declarative features ready
 * Custom Reports and Dashboards
 
 List of programmatic features ready
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* 1 Apex Trigger per group member
+* 1 Apex Test per group member
+* 1 Visualforce page per group member
+* Platform Event
 
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+
 
 ## Contributors
+* Adam Baird
+* Austin McElrone
+* Desiree Morris
+* Quan Nguyen
+* Sam Preston
 
-> Here list the people who have contributed to this project. (ignore this section, if its a solo project)

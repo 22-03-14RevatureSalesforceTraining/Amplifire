@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>54.0</apiVersion>
-    <description>A button which fires an event to the main component, telling it to use a random number for the Pokémon API call. Thus generating a random Pokémon and displaying it.</description>
-</AuraDefinitionBundle>

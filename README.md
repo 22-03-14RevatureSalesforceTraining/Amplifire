@@ -1,8 +1,8 @@
-# PROJECT NAME
+# PROJECT 2 - Create Your Own Business
 
 ## Project Description
 
-Here goes your awesome project description!
+Teams of associates are tasked with thinking of a business and creating a Salesforce org to support that business. Declarative features such as security, user interface, process automation, and dashboards should be configured to reflect the needs of the company. Furhermore, each associate is responsible for writing 1 apex trigger, 1 apex test, and 1 visualforce page. Teams are also tasked with implementing a Platform Event.
 
 ## Technologies Used
 

@@ -1,8 +1,8 @@
-# PROJECT 1
+# Project 1 - Amplifire Acoustics
 
 ## Project Description
 
-This project was done in a Trailhead Playground org.
+This project was done in a Trailhead Playground Org. It was focused on administration so there is no code to show.
 
 For my business, I decided to go with a band which tours and sells their merch online and at shows.
 The band networks with other groups through leads and opportunities. Bands we've played with before are the accounts.
@@ -14,34 +14,20 @@ The idea is that the products are the merch and tickets, and are sold to individ
 
 ## Features
 
-List of features ready and TODOs for future development
-* 
-*
+List of features ready:
+* Lead and case assignment rules set up
+* Web-to-lead and web-to-case set up
+* Case escalation rules set up
+* Opportunity path and case paths are customized
+* Security is enforced on all levels - Org level on two profiles, Object level for three user types,
+                                       Record level (org wide, role hierarchy, sharing rules, manual sharing), Field level
+* Custom app and home page
+* Four flows - Screen flow, Before-save, After-save and Autolaunched
+* A process through process builder launches the autolaunched flow
+* Both standard and custom reports and dashboards
 
 
 To-do list:
 * A future iteration might add some custom objects to deal with band networking instead of using the standard objects in an abnormal way.
-* 
-
-## Getting Started
-   
-(include git clone command)
-(include all environment setup steps)
-
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
-
-- All the `code` required to get started
-- Images of what it should look like
-
-## Usage
-
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
-
-## Contributors
-
-> Here list the people who have contributed to this project. (ignore this section, if its a solo project)
-
-## License
-
-This project uses the following license: [<license_name>](<link>).
+* Reports could be more fleshed out
+* Home page could use more customization to make it look better

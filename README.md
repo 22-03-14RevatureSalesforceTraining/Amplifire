@@ -4,6 +4,7 @@
 
 This project was done in a Trailhead Playground Org. It was focused on administration so there is no code to show.
 
+I was tasked with creating a Salesforce Org for a new business.
 For my business, I decided to go with a band which tours and sells their merch online and at shows.
 The band networks with other groups through leads and opportunities. Bands we've played with before are the accounts.
 The idea is that the products are the merch and tickets, and are sold to individuals online and at shows, with different pricebooks for those two.

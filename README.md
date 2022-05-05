@@ -13,7 +13,15 @@ Here goes your awesome project description!
 
 ## Features
 
-List of features ready and TODOs for future development
+List of declarative features ready
+* Org Level Security and profiles configured
+* Object level and Record level configured for 3 distinct user types
+* Custom App
+* Custom page layouts
+* Flows
+* Custom Reports and Dashboards
+
+List of programmatic features ready
 * Awesome feature 1
 * Awesome feature 2
 * Awesome feature 3

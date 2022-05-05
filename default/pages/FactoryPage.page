@@ -1,0 +1,24 @@
+<apex:page controller="FactoryPageController" tabStyle="Factory__c">
+    <apex:form >
+        <apex:pageBlock title="Filter Factories by Capacity">
+            Select Factory Capacity to Filter List:
+            <apex:selectList size="1" value="{!capacity}">
+                <apex:actionSupport event="onchange" action="{!getFactories}" rerender="table1"/>
+                <apex:selectOption itemLabel="1-2500" itemValue="2500"></apex:selectOption>
+                <apex:selectOption itemLabel="2501-5000" itemValue="5000"></apex:selectOption>
+                <apex:selectOption itemLabel=">5000" itemValue="5001"></apex:selectOption>
+            </apex:selectList>
+            <apex:pageBlockTable id="table1" value="{!factories}" var="fac">
+                <apex:column >
+                    <apex:facet name="header">Name</apex:facet>
+                    <apex:outputLink value="/{!fac.Id}">
+                        <apex:outputField value="{!fac.Name}"/>
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column value="{!fac.Used_Capacity__c}"></apex:column>
+                <apex:column value="{!fac.Capacity__c}"></apex:column>
+                <apex:column value="{!fac.Days_of_Operation__c}"></apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

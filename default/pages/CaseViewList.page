@@ -1,0 +1,53 @@
+<apex:page standardController="Case" recordSetVar="cases" extensions="myCustomExtension">
+    <h1 style="font-size:25px; color:blue">
+        {!Title}
+    </h1>
+    <apex:form >
+        <apex:pageBlock id="cases_list">
+            Filter:
+            <apex:selectList value="{! filterId }" size="1">
+                <apex:selectOptions value="{! listViewOptions }"/>
+                <apex:actionSupport event="onchange" reRender="cases_list"/>
+            </apex:selectList>
+            
+            <apex:pageBlockTable value="{!cases}" var="c">
+                <apex:column headerValue="{! c.Subject }">
+                    <apex:outputLink value="/{!c.Id}">{!c.Subject}</apex:outputLink>
+                </apex:column>
+                <apex:column value="{! c.Subject }"/>
+                <apex:column value="{! c.Priority }"/>
+                <apex:column value="{! c.Status }"/>
+            </apex:pageBlockTable>
+            
+            <table style="width: 100%">
+                <tr>
+                    <td>
+                        Page: <apex:outputText value="{!PageNumber} of {! CEILING(ResultSize / PageSize)}"/>
+                    </td>
+                    <td align="center">
+                        <apex:commandLink action="{! first }" value="<< First"/>
+                        &nbsp;&nbsp;
+                        <apex:commandLink action="{! Previous }" value="< Previous" rendered="{! HasPrevious }"/>
+                        <apex:outputText style="color: #ccc;" value="< Previous" rendered="{! NOT(HasPrevious)}"/>
+                        &nbsp;&nbsp;
+                        <apex:commandLink action="{! Next }" value="Next >" rendered="{! HasNext }"/>
+                        <apex:outputText style="color: #ccc;" value = "Next >" rendered="{! NOT(HasNext)}"/>
+                        &nbsp;&nbsp;                        
+                        <apex:commandLink action="{! last }" value = "Last >>"/>
+                    </td>
+                    <td align="right">
+                        Records per page:
+                        <apex:selectList value="{! PageSize }" size="1">
+                            <apex:selectOption itemValue="1" itemLabel="1"/>
+                            <apex:selectOption itemValue="3" itemLabel="3"/>
+                            <apex:selectOption itemValue="10" itemLabel="10"/>
+                            <apex:selectOption itemValue="20" itemLabel="20"/>
+                            <apex:actionSupport event="onchange" reRender="cases_list"/>
+                        </apex:selectList>
+                    </td>
+                </tr>
+            </table>
+        
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
